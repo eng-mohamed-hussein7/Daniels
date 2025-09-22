@@ -1,0 +1,85 @@
+
+/*!=====================background of navbar list to still on the same color====================!*/
+@media screen and (min-width: 768px) {
+  .navbar-links li a::after{
+    background-color: #fff;
+  }
+  .navbar-links li a{
+    color: #fff !important;
+  }
+  .navbar-links {
+    text-align: center;
+    border: none;
+    border-top: 1px solid rgba(12, 12, 12, 0.04);
+    background-color: transparent;
+    padding-block: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+      .navbar-expand-lg {
+        flex-wrap:nowrap;
+        justify-content: flex-start
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row
+    }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: var(--bs-navbar-nav-link-padding-x);
+        padding-left: var(--bs-navbar-nav-link-padding-x)
+    }
+
+    .navbar-expand-lg .navbar-nav-scroll {
+        overflow: visible
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex!important;
+        flex-basis: auto
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: none
+    }
+
+    .navbar-expand-lg .offcanvas {
+        position: static;
+        z-index: auto;
+        flex-grow: 1;
+        width: auto!important;
+        height: auto!important;
+        visibility: visible!important;
+        background-color: transparent!important;
+        border: 0!important;
+        transform: none!important;
+        transition: none
+    }
+
+    .navbar-expand-lg .offcanvas .offcanvas-header {
+        display: none
+    }
+
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        display: flex;
+        flex-grow: 0;
+        padding: 0;
+        overflow-y: visible
+    }
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 2.75rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 3.75rem;
+  }
+}
