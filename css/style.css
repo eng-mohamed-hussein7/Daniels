@@ -1,0 +1,557 @@
+/***********************       Start Global Style      ***********************/
+:root {
+  --bg-section-color: #f7f7f7;
+  --header-color: #343434;
+  --my-text-primary: #748182;
+  --my-bg-dark: #1c1c1c;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.my-text-header {
+  color: var(--header-color);
+}
+.my-text-primary {
+  color: var(--my-text-primary);
+}
+.bg-section-color {
+  background-color: var(--bg-section-color);
+}
+.my-bg-dark {
+  background-color: var(--my-bg-dark);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: "Montserrat", sans-serif;
+}
+.section-header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section-header h3 {
+  color: var(--header-color);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 900;
+  text-transform: capitalize;
+  position: relative;
+  width: fit-content;
+  z-index: 9;
+}
+.section-header h3::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.my-fs-18 {
+  font-size: 1.125rem;
+}
+.my-fs-15 {
+  font-size: 0.9375rem;
+}
+.my-fs-14 {
+  font-size: 0.875rem;
+}
+.my-fs-13 {
+  font-size: 0.8125rem;
+}
+.my-fs-12 {
+  font-size: 0.75rem;
+}
+.my-lh-24 {
+  line-height: 1.5rem;
+}
+.my-fw-extrabold {
+  font-weight: 800;
+}
+.my-ls-1 {
+  letter-spacing: 1px;
+}
+.my-ls-2 {
+  letter-spacing: 2px;
+}
+.my-mb-5 {
+  margin-bottom: 0.3125rem;
+}
+.my-mb-10 {
+  margin-bottom: 0.625rem;
+}
+.my-mb-15 {
+  margin-bottom: 0.9375rem;
+}
+.my-mb-30 {
+  margin-bottom: 1.875rem;
+}
+/***********************        End Global Style       ***********************/
+/***********************       Start Navbar Style      ***********************/
+.navbar-default {
+  color: #fff;
+  padding-top: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 999999;
+}
+.navbar-scroll {
+  background-color: #fff;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+  padding-block: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.navbar-brand {
+  color: #fff;
+}
+.navbar-brand-scroll {
+  color: #1c1c1c;
+}
+.navbar-brand:focus {
+  border: none;
+}
+
+.navbar-links li a.active::after {
+  width: 100%;
+}
+.navbar-links li a::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.5s;
+  width: 0;
+}
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+.navbar-links li a {
+  color: #fff !important;
+  position: relative;
+  width: fit-content;
+  font-size: 0.875rem;
+}
+#navbar-link.scroll li a {
+  color: #1c1c1c !important;
+}
+#navbar-link.scroll li a::after {
+  background-color: #1c1c1c !important;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#tog-btn {
+  color: #fff;
+}
+.tog-btn {
+  color: #1c1c1c !important;
+}
+/*!=====================background of navbar list to still on the same color====================!*/
+@media screen and (max-width: 767px) {
+  .navbar-links li a::after{
+    background-color: #000;
+  }
+  .navbar-links li a{
+    color: #1c1c1c !important;
+  }
+  .navbar-links {
+    text-align: center;
+    border: none;
+    border-top: 1px solid rgba(12, 12, 12, 0.04);
+    background-color: #fff;
+    padding-block: 20px;
+  }
+}
+/***********************        End Navbar Style       ***********************/
+/***********************       Start Home Style        ***********************/
+
+/*!=====================          background           =====================!*/
+.hero-section {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65)), url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/*!=====================            content            =====================!*/
+.hero-section .container .row .content h5 {
+  font-size: 50px;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+.hero-section .container .row .content h1 {
+  /* font-size: 3.75rem; */
+  font-weight: 200;
+  line-height: 72px;
+  margin-bottom: 10px;
+}
+/*!=====================           animation           =====================!*/
+.hero-section .container .row .content .cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.hero-section .container .row .content .cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.hero-section .container .row .content .cd-words-wrapper b.is-visible {
+  position: relative;
+}
+
+.hero-section .container .row .content .cd-headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+.hero-section .container .row .content .cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.hero-section
+  .container
+  .row
+  .content
+  .cd-headline.clip
+  .cd-words-wrapper::after {
+  /* line */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+}
+.hero-section .container .row .content .cd-headline.clip b {
+  opacity: 0;
+}
+.hero-section .container .row .content .cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+/*!=====================         Social links          =====================!*/
+.social-icon ul li {
+  --radius-height-width: 35px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}
+/***********************        End Home Style         ***********************/
+/***********************       Start About Style       ***********************/
+/*!=====================             Image             =====================!*/
+.about .container .row .image {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+.about .container .row .image img {
+  width: 100%;
+  display: block;
+}
+.about .container .row .image:after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  background-image: url(../images/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+/*!=====================            containt           =====================!*/
+.about .container .row .containt h3 {
+  font-size: 30px;
+}
+.about .container .row .containt > span {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  display: block;
+}
+/*!=====================            Skills           =====================!*/
+.about .container .row .skills {
+  margin-top: 30px;
+}
+.about .container .row .skills .progress,
+.progress-stacked {
+  height: 24px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+/*!=====================            buttons           =====================!*/
+.about .container .row .buttons a {
+  margin-top: 20px;
+  padding: 10px 30px;
+}
+.about .container .row .buttons a.btn.btn-outline-dark:hover {
+  background-color: var(--my-bg-dark);
+  color: #eee;
+}
+/* .about .container .row .buttons a  ======> to use it in contact form*/
+.btn.btn-dark.my-bg-dark:hover {
+  background-color: transparent;
+  color: var(--header-color);
+}
+/***********************        End About Style        ***********************/
+/***********************       Start Services Style    ***********************/
+.services .container .icon {
+  font-size: 1.875rem;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.services .container .card {
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+}
+.services .container .card:hover .icon {
+  background-color: var(--my-bg-dark);
+  color: #eee;
+}
+/***********************        End Services Style     ***********************/
+/***********************       Start Works Style       ***********************/
+.works .container ul li button {
+  position: relative;
+  color: #222;
+  font-weight: 700;
+  font-size: 16px;
+}
+.works .container ul li button::after {
+  width: fit-content;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background-color: #111;
+  position: absolute;
+  transition: all 0.4s;
+  width: 0;
+}
+.works .container ul li button.active::after,
+.works .container ul li button:focus-within::after {
+  width: 95%;
+}
+/*!=====================            gallery            =====================!*/
+.works .container .our-works .image {
+  position: relative;
+}
+.works .container .our-works .image:hover .layer {
+  opacity: 1;
+  transform: translateY(0);
+}
+.works .container .our-works .image .layer h6 {
+  transform: translateY(-15px);
+  transition: all 0.5s;
+}
+.works .container .our-works .image:hover .layer h6 {
+  transform: translateY(0);
+}
+.works .container .our-works .image .layer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--header-color);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s;
+}
+.works .container .our-works .image .layer ul li {
+  --radius-height-width: 30px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.works .container .our-works .image .layer ul li:hover {
+  background-color: transparent;
+  color: #1c1c1c;
+  border: 1px solid #111;
+}
+
+/***********************        End Works Style        ***********************/
+/***********************       Start Clients Style     ***********************/
+.clients .testimonials .container .inner .profile-image {
+  --radius-height-width: 90px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.clients .testimonials .container .inner p {
+  word-spacing: 2px;
+}
+.clients .testimonials .container .inner span {
+  color: #888;
+}
+
+.carousel-indicators [data-bs-target] {
+  --radius-height-width: 10px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  background-color: #869791;
+}
+
+.clients .our-number h3,
+.clients .our-number .icon i {
+  font-size: 1.875rem;
+}
+.clients .our-number h3 {
+  font-weight: 900;
+}
+/***********************        End Clients Style      ***********************/
+/***********************       Start Team Style        ***********************/
+.team .container .title {
+  background-color: #5b5b5b;
+  padding: 15px;
+}
+.team .container .image {
+  position: relative;
+}
+.team .container .image .layer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+.team .container .image .layer ul li a:hover {
+  background-color: transparent;
+  color: #000;
+}
+.team .container .col:hover .image .layer {
+  opacity: 1;
+  transform: rotateY(360deg);
+  transition: all 0.5s;
+}
+.team .container .image img {
+  transition: all 0.5s;
+}
+.team .container .image:hover img {
+  transform: scale(1.15);
+}
+.team .container .image .layer ul li a {
+  --radius-height-width: 40px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.5s;
+}
+/***********************        End Team Style         ***********************/
+/***********************       Start Contact Style     ***********************/
+.contact .container .row .col .icon {
+  --radius-height-width: 60px;
+  height: var(--radius-height-width);
+  width: var(--radius-height-width);
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  font-size: 25px;
+  line-height: 60px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.contact .container .row .col:hover .icon {
+  background-color: var(--my-bg-dark);
+  color: #eee;
+}
+.contact .container form textarea,
+.contact .container form input {
+  background-color: #f4f4f4;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #343434;
+}
+.contact .container form textarea:focus,
+.contact .container form input:focus {
+  box-shadow: none;
+}
+/***********************        End Contact Style      ***********************/
+/***********************       Start Footer Style      ***********************/
+
+/***********************        End Footer Style       ***********************/
